@@ -84,28 +84,28 @@ function add(tableName, body) {
     let shapedBody
 
     if (tableName == 'users') {
-        shapedBody = shapeObject(body, goodsModel)
+        shapedBody = shapeObject(body, usersModel)
     }
     if (tableName == 'admin') {
-        shapedBody = shapeObject(body, inventoriesModel)
+        shapedBody = shapeObject(body, adminModel)
     }
-    if (tableName == 'customer') {
-        shapedBody = shapeObject(body, storesModel)
+    if (tableName == 'customers') {
+        shapedBody = shapeObject(body, customersModel)
     }
     if (tableName == 'storesInfo') {
-        shapedBody = shapeObject(body, storesModel)
+        shapedBody = shapeObject(body, storesInfoModel)
     }
     if (tableName == 'products') {
-        shapedBody = shapeObject(body, storesModel)
+        shapedBody = shapeObject(body, productsModel)
     }
     if (tableName == 'warehouse') {
-        shapedBody = shapeObject(body, storesModel)
+        shapedBody = shapeObject(body, warehouseModel)
     }
     if (tableName == 'promos') {
-        shapedBody = shapeObject(body, storesModel)
+        shapedBody = shapeObject(body, promosModel)
     }
     if (tableName == 'transactions') {
-        shapedBody = shapeObject(body, storesModel)
+        shapedBody = shapeObject(body, transactionsModel)
     }
 
     if (!shapedBody) {
