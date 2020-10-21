@@ -1,0 +1,47 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+
+const rootRoute = require('./routes/rootRoute')
+const addUsersRoute = require('./routes/users/addUsers')
+const getUsersRoute = require('./routes/users/getUsers')
+const addAdminRoute = require('./routes/admin/addAdmin')
+const getAdminRoute = require('./routes/admin/getAdmin')
+const addCustomersRoute = require('./routes/customers/addCustomers')
+const getCustomersRoute = require('./routes/customers/getCustomers')
+const addStoresInfoRoute = require('./routes/storesInfo/addStoresInfo')
+const getStoresInfoRoute = require('./routes/storesInfo/getStoresInfo')
+const addProductsRoute = require('./routes/products/addProducts')
+const getProductsRoute = require('./routes/products/getProducts')
+const addWarehouseRoute = require('./routes/warehouse/addWarehouse')
+const getWarehouseRoute = require('./routes/warehouse/getWarehouse')
+const addPromosRoute = require('./routes/promos/addPromos')
+const getPromosRoute = require('./routes/promos/getPromos')
+const addTransactionsRoute = require('./routes/transactions/addTransactions')
+const getTransactionsRoute = require('./routes/transactions/getTransactions')
+
+
+const app = express()
+app.use(bodyParser.json())
+
+app.use(rootRoute)
+app.use(addUsersRoute)
+app.use(getUsersRoute)
+app.use(addAdminRoute)
+app.use(getAdminRoute)
+app.use(addCustomersRoute)
+app.use(getCustomersRoute)
+app.use(addStoresInfoRoute)
+app.use(getStoresInfoRoute)
+app.use(addProductsRoute)
+app.use(getProductsRoute)
+app.use(addWarehouseRoute)
+app.use(getWarehouseRoute)
+app.use(addPromosRoute)
+app.use(getPromosRoute)
+app.use(addTransactionsRoute)
+app.use(getTransactionsRoute)
+
+const port = 3000
+app.listen(port, () => {
+    console.log(`Backend app is running in http://localhost:${port}`);
+})
