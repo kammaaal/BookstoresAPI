@@ -1,6 +1,15 @@
 {
   "users": [],
-  "admin": [],
+  "admin": [
+    {
+      "id": 2,
+      "userId": 70
+    },
+    {
+      "id": "5",
+      "userId": "80"
+    }
+  ],
   "customer": [],
   "storesInfo": [],
   "products": [],
