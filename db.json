@@ -1,1 +1,10 @@
-{}
+{
+  "users": [],
+  "admin": [],
+  "customer": [],
+  "storesInfo": [],
+  "products": [],
+  "warehouse": [],
+  "promos": [],
+  "transactions": []
+}
